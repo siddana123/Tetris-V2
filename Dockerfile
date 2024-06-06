@@ -4,6 +4,9 @@ FROM node:16
 # Set the working directory inside the container
 WORKDIR /app
 
+# Install ping utility
+RUN apt-get update && apt-get install -y iputils-ping
+
 # Copy package.json and package-lock.json (or yarn.lock) to the container
 COPY package*.json ./
 
