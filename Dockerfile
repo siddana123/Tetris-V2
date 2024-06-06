@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Install ping utility
 RUN apt-get update && apt-get install -y iputils-ping
-
+RUN apt-get install -y git
 # Copy package.json and package-lock.json (or yarn.lock) to the container
 COPY package*.json ./
 
